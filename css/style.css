@@ -269,9 +269,6 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        display: grid;
-        grid-template-columns: 33% 34% 33%;
-        grid-template-rows: auto 90vh /*auto*/ auto  10vh;
         grid-template-areas: 
             "header header header"
             "sect1 sect1 sect1"
@@ -282,6 +279,14 @@ footer {
 
     aside {
         display: none;
+    }
+
+    .container .navigation {
+        width: 100%;
+        position: fixed;
+    top: 0;
+    left: 0;
+    float: right;
     }
 
     .container .slider .slide .caption {
