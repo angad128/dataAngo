@@ -152,6 +152,14 @@ footer {
   padding: 10px;
   margin-top: 50px;
 }
+/*.carousel-inner > .item {
+    position: relative;
+    display: none;
+    -webkit-transition: 0.6s ease-in-out left;
+    -moz-transition: 0.6s ease-in-out left;
+    -o-transition: 0.6s ease-in-out left;
+    transition: 0.6s ease-in-out left;
+}*/
 #myCarousel .item {
   overflow: hidden;
 }
@@ -160,13 +168,13 @@ footer {
   width: 100%;
   height: 90vh;
   animation-name: zoomin;     
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
 @keyframes zoomin {
-  from {transform: scale(1.2);}
+  from {transform: scale(1.1);}
   to {transform: scale(1);}
 }
 
