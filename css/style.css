@@ -47,7 +47,7 @@ body {
     
     display: grid;
     grid-template-columns: auto 27% 27% 27%;
-    grid-template-rows: auto 90vh /*auto*/ auto  10vh;
+    grid-template-rows: auto 90vh auto  10vh;
     grid-template-areas: 
         "sidebar header header header"
         "sidebar sect1 sect1 sect1"
@@ -67,6 +67,7 @@ aside {
 header {
     grid-area: header;
 }
+
 
 section:nth-of-type(1){
     grid-area: sect1;
@@ -138,92 +139,60 @@ footer {
 }
 
 
-.container .slider {
-    position: absolute;
-    top: 0;
-    left: 19%;
-    width: 400%;
-    height: 100%;
-    animation: slideAnimate 12s linear infinite;
+
+.carousel-caption {
+  margin-bottom: 70px; 
+}
+.carousel-caption h1 {
+  font-size: 55px;
+}
+.carousel-caption p {
+  width: 240px;
+  background-color: #00AEEF;
+  padding: 10px;
+  margin-top: 50px;
+}
+#myCarousel .item {
+  overflow: hidden;
 }
 
-.container .slider .slide {
-    position: relative;
-    width: 25%;
-    height: 100%;
-    float: left;
-    z-index: 01;
+#myCarousel .item img {
+  width: 100%;
+  height: 90vh;
+  animation-name: zoomin;     
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
 }
-
-.container .slider .slide .caption {
-    position: absolute;
-    bottom: 60px;
-    left: 60px;
-    right: 60px;
-    padding: 30px;
-    background: rgba(0,0,0,0.5);
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-
-.container .slider .slide .caption h1 {
-    margin: 0 0 20px;
-    padding: 0;
-    color: #fff;
-    font-size: 48px;
-    transition: 0.5s;
-}
-
-.container .slider .slide .caption p {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 18px;
-    transition: 0.5s;
-}
-
-.container .slider  .slide.slide1 {
-    background: url(../img/img4.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-.container .slider  .slide.slide2 {
-    background: url(../img/img2.jpeg);
-    background-size: cover;
-    background-position: center;
-}
-.container .slider  .slide.slide3 {
-    background: url(../img/img3.jpeg);
-    background-size: cover;
-    background-position: center;
+@keyframes zoomin {
+  from {transform: scale(1.2);}
+  to {transform: scale(1);}
 }
 
 .section {
-  padding: 100px 0; 
-}
-
-.service {
-   text-align: center; 
-}
-.service .block {
-    margin-bottom: 50px; 
-}
-.service .block i {
-    font-size: 30px;
-    display: inline-block;
-    margin-bottom: 15px;
-    color: #1bafb4; 
-}
-.service .block h3 {
-    color: #333333;
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase; 
-}
-.service .block p {
-    color: #666;
+  padding: 100px 0; }
+    .service {
+       text-align: center; }
+    .service .block {
+        margin-bottom: 50px; 
+    }
+    .service .block i {
+        font-size: 30px;
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #1bafb4; 
+    }
+    .service .block h3 {
+        color: #333333;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        text-transform: uppercase; 
+    }
+    .service .block p {
+        color: #666;
 }
 
 footer {
@@ -239,31 +208,7 @@ footer {
       color: #333; }
       footer p a:hover {
         color: #333;
-        text-decoration: none; }
-
-
-@keyframes slideAnimate {
-    0%{
-        left: 0;
-    }
-    30%{
-        left: 0;
-    }
-    33%{
-        left: -100%;
-    }
-    62%{
-        left: -100%;
-    }
-    66%{
-        left: -200%;
-    }
-    97%{
-        left: -200%;
-    }
-    100% {
-        left: -300%;
-    }
+        text-decoration: none; 
 }
 
 
@@ -274,36 +219,31 @@ footer {
             "sect1 sect1 sect1"
             "main main main"
             "footer footer footer"
-
     }
 
     aside {
-        display: none;
+      display: none;
     }
-
+    section:nth-of-type(1) {
+      width: 100vw;
+    }
+    .carousel-caption {
+      margin-bottom: 0px; 
+    }
+    .carousel-caption h1 {
+      font-size: 35px;
+    }
+    .carousel-caption p {
+      width: 220px;
+      padding: 8px;
+      margin-top: 40px;
+    }
     .container .navigation {
         width: 100%;
         position: fixed;
-    top: 0;
-    left: 0;
-    float: right;
+        top: 0;
+        left: 0;
     }
 
-    .container .slider .slide .caption {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        padding: 20px;
-    }
-
-    .container .slider .slide .caption h1 {
-        margin: 0 0 10px;
-        font-size: 38px;
-    }
-
-    .container .slider .slide .caption p {
-        font-size: 16px;
-    }
 }
 
